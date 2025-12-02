@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AbramAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #020617; /* Slate 950 base */
+        color: #e2e8f0; /* Slate 200 */
+        overflow-x: hidden;
+      }
+      
+      /* Smooth gradient background animation */
+      .gradient-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: 
+          radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.08), transparent 40%),
+          radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08), transparent 40%),
+          radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.08), transparent 40%);
+        pointer-events: none;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(148, 163, 184, 0.2); 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(148, 163, 184, 0.4); 
+      }
+
+      /* Markdown Styles */
+      .markdown-body p {
+        margin-bottom: 0.85em;
+        line-height: 1.7;
+      }
+      .markdown-body ul {
+        list-style-type: disc;
+        padding-left: 1.5em;
+        margin-bottom: 1em;
+      }
+      .markdown-body ol {
+        list-style-type: decimal;
+        padding-left: 1.5em;
+        margin-bottom: 1em;
+      }
+      .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+        font-weight: 600;
+        margin-top: 1.2em;
+        margin-bottom: 0.6em;
+        color: #f8fafc;
+        letter-spacing: -0.02em;
+      }
+      .markdown-body strong {
+        color: #c7d2fe; /* Indigo 200 */
+        font-weight: 600;
+      }
+      
+      /* LaTeX specific adjustments */
+      .katex-display {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.5em 0;
+        margin: 1em 0;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "remark-math": "https://aistudiocdn.com/remark-math@^6.0.0",
+    "rehype-katex": "https://aistudiocdn.com/rehype-katex@^7.0.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div class="gradient-bg"></div>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
